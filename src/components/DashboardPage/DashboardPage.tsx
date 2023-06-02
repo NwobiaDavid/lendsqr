@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { saveUsersToLocal, getUsersFromLocal, User } from '../../services/indexedDB';
 import {getUsers} from '../../services/mockAPI'
 
@@ -34,11 +35,15 @@ const Dashboard: React.FC = () => {
         <ul>
           {users.map((user) => (
             <li key={user.id}>
+         
+              <Link to={`/user/${user.id}`}>           
+              <p>NOTHING TEST---== {user.guarantor.firstName}</p>
               <p>Email: {user.email}</p>
               <p>Phone: {user.phoneNumber}</p>
               <p>Created At: {user.createdAt}</p>
               <p>Organization: {user.orgName}</p>
               <p>Username: {user.userName}</p>
+              </Link>
             </li>
           ))}
         </ul>
