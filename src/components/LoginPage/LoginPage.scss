@@ -1,4 +1,147 @@
-.login-page{
-    background-color: antiquewhite;
-    font-weight: bolder;
+$primaryColor: #39CDCC;
+$secondaryColor: #213F7D;
+$primaryColor-hover: #31aaaa;
+
+@font-face {
+  font-family: 'Avenir-Next';
+  src: url('../../assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir-Next-bold';
+  src: url('../../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+body{
+  margin: 0;
+  font-family: 'Avenir-Next', sans-serif;
+}
+
+h2{
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: -0.04em;
+    color: $secondaryColor;
+    font-family: 'Avenir-Next-bold', sans-serif;
+  }
+  p{
+    color: #545F7D;
+    margin-top: 0;
+    font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  }
+
+  a{
+    text-decoration: none;
+    color: $primaryColor;
+    font-weight: 600;
+  &:hover{
+    color: $primaryColor-hover;
+  }}
+
+  .login-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+  }
+
+/* right section  */
+
+section.page-right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  
+    img.logo {
+      position: absolute;
+      top: 10%;
+      left: 97px;
+    }
+  
+    .character {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+/* left section */
+
+section.page-left{
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form{
+  display: flex;
+  flex-direction: column;
+}
+>div{
+  width: 60%;
+}
+.form-header{
+  margin-bottom: 60px;
+}
+
+.input{
+    outline: 0;
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    padding: 1rem;
+    margin-bottom: 24px;
+    border-radius: 5px;
+  }
+.password-input{
+  display: flex;
+  align-items: center;
+  position: relative;
+}  
+.password-input>input{
+    width: 100%;
+    
+  }
+
+  .password-toggle{
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    bottom: 50%;
+    transform: translateY(-100%);
+    cursor: pointer;
+  }
+  .password-input a{
+    font-size: 12px;
+    height: fit-content;
+  }
+  
+form>a{
+    margin-bottom: 30px;
+    
+    
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    line-height: 16px;
+  }
+  form>button{
+    height: 48px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 0;
+    background-color: $primaryColor;
+    color: white;
+    font-weight: 600;
+  
+   &:hover{
+      background-color: $primaryColor-hover;
+    }
+  }
 }

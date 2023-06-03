@@ -16,12 +16,11 @@ const App: React.FC = () => {
   }, [location]);
 
   return (
-   
       <div>
         {/* Conditionally render the Header component */}
         {!isLoginPage && <Header />}
 
-        {/* Navigation */}
+        {/* Navigation
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -32,10 +31,7 @@ const App: React.FC = () => {
           <li>
             <Link to="/users">Users</Link>
           </li>
-          <li>
-            <Link to="/user/:id">User Details</Link>
-          </li>
-        </ul>
+        </ul> */}
 
         {/* Routes */}
         <Routes>
@@ -45,8 +41,8 @@ const App: React.FC = () => {
           <Route path="/user/:id" element={<UserDetailsPage />} />
         </Routes>
       </div>
-    
-  );
+      
+    );
 };
 
 export default App;
